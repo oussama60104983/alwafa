@@ -1,73 +1,84 @@
-# Welcome to your Lovable project
+# AL WAFA Brokerage Trading
 
-## Project info
+AL WAFA Brokerage Trading W.L.L. is a leading commodities trading company based in Al Wakrah, Qatar. We specialize in connecting real buyers to real sellers in the global commodities market, focusing on metals, minerals, and petroleum products.
 
-**URL**: https://lovable.dev/projects/4596d7af-6633-4fe8-902c-d3596247e338
+## 🌐 Website
 
-## How can I edit this code?
+Visit our website to learn more about our services and get in touch with us.
 
-There are several ways of editing your application.
+## 🚀 Getting Started
 
-**Use Lovable**
+### Prerequisites
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/4596d7af-6633-4fe8-902c-d3596247e338) and start prompting.
+- Node.js (v18 or higher recommended)
+- npm or yarn
 
-Changes made via Lovable will be committed automatically to this repo.
+### Installation
 
-**Use your preferred IDE**
+1. Clone the repository:
+```bash
+git clone https://github.com/oussama60104983/alwafa.git
+cd alwafa
+```
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+2. Install dependencies:
+```bash
+npm install
+```
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
-
-Follow these steps:
-
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
-
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
-
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
+3. Start the development server:
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+The application will be available at `http://localhost:8080`
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Build for Production
 
-**Use GitHub Codespaces**
+```bash
+npm run build
+```
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+The production build will be in the `dist` folder.
 
-## What technologies are used for this project?
+## 🛠️ Technologies Used
 
-This project is built with:
+- **Vite** - Build tool and dev server
+- **React** - UI library
+- **TypeScript** - Type safety
+- **Tailwind CSS** - Styling
+- **shadcn/ui** - UI components
+- **React Router** - Routing
+- **Lucide React** - Icons
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 📁 Project Structure
 
-## How can I deploy this project?
+```
+alwafa/
+├── src/
+│   ├── components/ui/    # UI components
+│   ├── pages/            # Page components
+│   ├── assets/           # Images and static assets
+│   ├── hooks/            # Custom React hooks
+│   └── lib/              # Utility functions
+├── public/               # Public assets
+└── dist/                 # Production build
+```
 
-Simply open [Lovable](https://lovable.dev/projects/4596d7af-6633-4fe8-902c-d3596247e338) and click on Share -> Publish.
+## 📝 Features
 
-## Can I connect a custom domain to my Lovable project?
+- Responsive design for all devices
+- Smooth scrolling navigation
+- Contact form
+- Sections: Hero, About, Metals, Petroleum, Contact, Footer
+- Modern UI with Tailwind CSS
 
-Yes, you can!
+## 📧 Contact
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+- **Location**: Zone 90, Street 720, Building 54, Floor 2, Office 10, Al Wakrah - Qatar State
+- **Email**: info@alwafatrading.com
+- **Phone**: +974 XXXX XXXX
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 📄 License
+
+This project is proprietary and confidential.
