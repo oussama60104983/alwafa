@@ -55,10 +55,31 @@ jobs:
           echo "Current directory:"
           pwd
           echo "Contents of deploy-package:"
-          ls -la ./deploy-package/
+          ls -la ./deploy-package/ || echo "deploy-package not found"
           echo "Looking for node-app folder:"
-          ls -la ./deploy-package/node-app/ 2>/dev/null || echo "node-app folder not found, checking root..."
-          find ./deploy-package -name "index.html" -o -name "web.config" | head -5
+          ls -la ./deploy-package/node-app/ 2>/dev/null || echo "node-app folder not found"
+          echo "Searching for index.html:"
+          find . -name "index.html" -type f 2>/dev/null | head -5
+          echo "Searching for web.config:"
+          find . -name "web.config" -type f 2>/dev/null | head -5
+      
+      - name: Prepare deployment package
+        id: prepare
+        run: |
+          # Find where the files actually are
+          if [ -d "./deploy-package/node-app" ]; then
+            DEPLOY_PATH="./deploy-package/node-app"
+          elif [ -f "./deploy-package/index.html" ]; then
+            DEPLOY_PATH="./deploy-package"
+          elif [ -d "./node-app" ]; then
+            DEPLOY_PATH="./node-app"
+          else
+            # Find the directory with index.html
+            DEPLOY_PATH=$(find . -name "index.html" -type f | head -1 | xargs dirname)
+          fi
+          echo "DEPLOY_PATH=$DEPLOY_PATH" >> $GITHUB_OUTPUT
+          echo "Deployment path: $DEPLOY_PATH"
+          ls -la "$DEPLOY_PATH"
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -66,6 +87,6 @@ jobs:
         with:
           app-name: 'w25-comp4101-17'
           slot-name: 'Production'
-          package: ./deploy-package/node-app
+          package: ${{ steps.prepare.outputs.DEPLOY_PATH }}
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D537B7CD2A6E41F89A22E3D04848E3E6 }}
           startup-command: ''
