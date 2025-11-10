@@ -48,12 +48,14 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: node-app
-          path: .
+          path: ./deploy
       
-      - name: List files to verify
+      - name: List files to verify deployment
         run: |
-          ls -la
-          ls -la node-app/ || echo "Files in current directory"
+          echo "Contents of deploy folder:"
+          ls -la ./deploy/
+          echo "Contents of node-app folder:"
+          ls -la ./deploy/node-app/ || ls -la ./deploy/
       
       - name: 'Deploy to Azure Web App'
         id: deploy-to-webapp
@@ -61,6 +63,6 @@ jobs:
         with:
           app-name: 'w25-comp4101-17'
           slot-name: 'Production'
-          package: ./node-app
+          package: ./deploy/node-app
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D537B7CD2A6E41F89A22E3D04848E3E6 }}
           startup-command: ''
