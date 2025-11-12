@@ -1,6 +1,6 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import metalsImage from "@/assets/metals.svg";
+import metalsImage from "@/assets/metals-image.jpg";
 
 const MetalsSection = () => {
   const metalCategories = [
@@ -34,30 +34,30 @@ const MetalsSection = () => {
   ];
 
   return (
-    <section id="metals" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold text-navy mb-6">
+    <section id="metals" className="py-12 bg-muted/30">
+      <div className="container mx-auto px-6">
+        <div className="text-center mb-10">
+          <h2 className="text-2xl md:text-3xl font-bold text-navy mb-4">
             Metals & <span className="text-gold">Minerals</span>
           </h2>
-          <p className="text-lg text-foreground/80 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-sm text-foreground/80 max-w-3xl mx-auto leading-relaxed">
             Marketing metals and minerals involves showcasing their quality, availability, and competitive pricing. We connect producers with buyers, ensuring transparent transactions and reliable supply chains across global markets.
           </p>
         </div>
 
         {/* Image Banner */}
-        <div className="mb-16 relative rounded-lg overflow-hidden shadow-elegant">
+        <div className="mb-10 relative rounded-lg overflow-hidden shadow-elegant">
           <img
             src={metalsImage}
             alt="Metals and Minerals"
-            className="w-full h-[400px] object-cover"
+            className="w-full h-[300px] object-cover"
           />
-          <div className="absolute inset-0 bg-gradient-to-r from-navy/70 to-transparent flex items-center">
-            <div className="px-8">
-              <h3 className="text-3xl font-bold text-primary-foreground mb-4">
+          <div className="absolute inset-0 bg-gradient-to-r from-navy/70 to-transparent flex items-center pointer-events-none">
+            <div className="px-6">
+              <h3 className="text-xl font-bold text-primary-foreground mb-2">
                 Premium Quality Metals
               </h3>
-              <p className="text-lg text-primary-foreground/90 max-w-xl">
+              <p className="text-sm text-primary-foreground/90 max-w-xl">
                 From base metals to precious metals, we facilitate trading of the highest quality materials with certified specifications.
               </p>
             </div>
@@ -65,21 +65,21 @@ const MetalsSection = () => {
         </div>
 
         {/* Metal Categories Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5">
           {metalCategories.map((category, index) => (
             <Card key={index} className="shadow-elegant hover:shadow-gold transition-smooth border-gold/20">
-              <CardHeader>
-                <CardTitle className="text-2xl font-bold text-navy flex items-center justify-between">
+              <CardHeader className="pb-3">
+                <CardTitle className="text-lg font-bold text-navy flex items-center justify-between">
                   {category.category}
-                  <Badge className="bg-gold text-navy">{category.items.length}</Badge>
+                  <Badge className="bg-gold text-navy text-xs">{category.items.length}</Badge>
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <ul className="space-y-4">
+                <ul className="space-y-2.5">
                   {category.items.map((item, itemIndex) => (
-                    <li key={itemIndex} className="border-l-4 border-gold pl-4 py-2">
-                      <div className="font-semibold text-navy">{item.name}</div>
-                      <div className="text-sm text-foreground/70">{item.grade}</div>
+                    <li key={itemIndex} className="border-l-4 border-gold pl-3 py-1.5">
+                      <div className="font-semibold text-navy text-sm">{item.name}</div>
+                      <div className="text-xs text-foreground/70">{item.grade}</div>
                     </li>
                   ))}
                 </ul>
@@ -89,18 +89,18 @@ const MetalsSection = () => {
         </div>
 
         {/* Additional Info */}
-        <Card className="mt-12 bg-navy text-primary-foreground shadow-elegant">
-          <CardContent className="p-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <Card className="mt-8 bg-navy text-primary-foreground shadow-elegant">
+          <CardContent className="p-6">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-gold">Quality Assurance</h3>
-                <p className="text-primary-foreground/90 leading-relaxed">
+                <h3 className="text-lg font-bold mb-3 text-gold">Quality Assurance</h3>
+                <p className="text-sm text-primary-foreground/90 leading-relaxed">
                   All metals and minerals are sourced from certified suppliers and undergo rigorous quality checks. We ensure compliance with international standards and provide complete documentation for every transaction.
                 </p>
               </div>
               <div>
-                <h3 className="text-2xl font-bold mb-4 text-gold">Global Logistics</h3>
-                <p className="text-primary-foreground/90 leading-relaxed">
+                <h3 className="text-lg font-bold mb-3 text-gold">Global Logistics</h3>
+                <p className="text-sm text-primary-foreground/90 leading-relaxed">
                   Our extensive network enables efficient delivery worldwide. We handle all aspects of logistics, from sourcing to final delivery, ensuring your commodities reach their destination safely and on time.
                 </p>
               </div>

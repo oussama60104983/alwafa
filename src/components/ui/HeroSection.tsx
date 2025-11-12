@@ -25,7 +25,7 @@ const HeroSection = () => {
     title: "Trusted Partner",
     description: "Reliable and secure trading"
   }];
-  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-20" style={{
+  return <section id="home" className="relative min-h-screen flex items-center justify-center pt-16" style={{
     backgroundImage: `url(${heroBg})`,
     backgroundSize: "cover",
     backgroundPosition: "center",
@@ -44,39 +44,39 @@ const HeroSection = () => {
       />
 
       {/* Content */}
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto px-6 relative z-10 py-12">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-5xl md:text-7xl font-bold text-primary-foreground mb-6 leading-tight">
+          <h1 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4 leading-tight">
             Connecting Real Buyers to{" "}
             <span className="text-gold">Real Sellers</span>
           </h1>
-          <p className="text-xl md:text-2xl text-primary-foreground/90 mb-8 leading-relaxed">
+          <p className="text-base md:text-lg text-primary-foreground/90 mb-5 leading-relaxed">
             In the Global Commodities Market
           </p>
-          <p className="text-lg text-primary-foreground/80 mb-12 max-w-2xl mx-auto">
+          <p className="text-sm md:text-base text-primary-foreground/80 mb-8 max-w-2xl mx-auto">
             Marketing for metals, minerals, and petroleum encompasses strategies to promote and sell these commodities globally. Effective marketing considers supply and demand, price volatility, market trends, customer needs, and hedging strategies.
           </p>
 
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-16">
-            <Button onClick={scrollToContact} size="lg" className="bg-gold hover:bg-gold-dark text-navy font-semibold text-lg px-8 py-6 shadow-gold">
-              Get Started <ArrowRight className="ml-2" />
+          <div className="flex flex-col sm:flex-row gap-3 justify-center mb-10">
+            <Button onClick={scrollToContact} className="bg-gold hover:bg-gold-dark text-navy font-semibold text-sm px-6 py-2.5 shadow-gold h-auto">
+              Get Started <ArrowRight className="ml-2 w-4 h-4" />
             </Button>
             <Button onClick={() => document.getElementById("about")?.scrollIntoView({
             behavior: "smooth"
-          })} size="lg" variant="outline" className="border-2 border-gold text-primary-foreground font-semibold text-lg px-8 py-6 bg-[#353c4c]">
+          })} variant="outline" className="border-2 border-gold text-primary-foreground font-semibold text-sm px-6 py-2.5 bg-[#353c4c] h-auto">
               Learn More
             </Button>
           </div>
 
           {/* Feature Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {features.map((feature, index) => <Card key={index} className="bg-card/10 backdrop-blur-md border-gold/20 shadow-elegant py-[10px]">
-                <CardContent className="pt-6 py-0">
-                  <feature.icon className="w-12 h-12 text-gold mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold text-primary-foreground mb-2">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            {features.map((feature, index) => <Card key={index} className="bg-card/10 backdrop-blur-md border-gold/20 shadow-elegant">
+                <CardContent className="pt-5 pb-4 px-4">
+                  <feature.icon className="w-8 h-8 text-gold mx-auto mb-3" />
+                  <h3 className="text-base font-semibold text-primary-foreground mb-1.5">
                     {feature.title}
                   </h3>
-                  <p className="text-primary-foreground/70">{feature.description}</p>
+                  <p className="text-xs text-primary-foreground/70">{feature.description}</p>
                 </CardContent>
               </Card>)}
           </div>
