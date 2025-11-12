@@ -47,7 +47,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10 py-12">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-2xl md:text-3xl font-bold text-primary-foreground mb-4 leading-tight">
-            Connecting Real Buyers to{" "}
+            Connecting <span className="text-gold">Real Buyers</span> to{" "}
             <span className="text-gold">Real Sellers</span>
           </h1>
           <p className="text-base md:text-lg text-primary-foreground/90 mb-5 leading-relaxed">

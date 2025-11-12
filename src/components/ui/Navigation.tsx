@@ -39,11 +39,11 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-6">
         <div className="flex items-center h-24 relative">
-          {/* Spacer for 20% positioning */}
-          <div className="w-[20%]"></div>
+          {/* Spacer for 22% positioning */}
+          <div className="w-[22%]"></div>
           
-          {/* Logo - positioned at 20% from left */}
-          <div className="absolute left-[20%] transform -translate-x-1/2 flex items-center py-1">
+          {/* Logo - positioned at 22% from left */}
+          <div className="absolute left-[22%] transform -translate-x-1/2 flex items-center py-1">
             <img 
               src={logo} 
               alt="AL WAFA Brokerage Trading W.L.L" 

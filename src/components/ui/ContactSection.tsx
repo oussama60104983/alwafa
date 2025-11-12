@@ -148,13 +148,13 @@ const ContactSection = () => {
                       <Label htmlFor="name" className="text-navy font-medium text-sm">
                         Full Name *
                       </Label>
-                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required placeholder="John Doe" className="border-gold/30 focus:border-gold text-sm h-9" disabled={isSubmitting} />
+                      <Input id="name" name="name" value={formData.name} onChange={handleChange} required className="border-2 border-gold/30 focus:border-gold bg-gray-50 text-sm h-9" disabled={isSubmitting} />
                     </div>
                     <div className="space-y-1.5">
                       <Label htmlFor="email" className="text-navy font-medium text-sm">
                         Email Address *
                       </Label>
-                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required placeholder="john@example.com" className="border-gold/30 focus:border-gold text-sm h-9" disabled={isSubmitting} />
+                      <Input id="email" name="email" type="email" value={formData.email} onChange={handleChange} required className="border-2 border-gold/30 focus:border-gold bg-gray-50 text-sm h-9" disabled={isSubmitting} />
                     </div>
                   </div>
 
@@ -162,14 +162,14 @@ const ContactSection = () => {
                     <Label htmlFor="subject" className="text-navy font-medium text-sm">
                       Subject *
                     </Label>
-                    <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} required placeholder="Inquiry about petroleum products" className="border-gold/30 focus:border-gold text-sm h-9" disabled={isSubmitting} />
+                    <Input id="subject" name="subject" value={formData.subject} onChange={handleChange} required className="border-2 border-gold/30 focus:border-gold bg-gray-50 text-sm h-9" disabled={isSubmitting} />
                   </div>
 
                   <div className="space-y-1.5">
                     <Label htmlFor="message" className="text-navy font-medium text-sm">
                       Message *
                     </Label>
-                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required placeholder="Tell us about your requirements..." rows={5} className="border-gold/30 focus:border-gold resize-none text-sm" disabled={isSubmitting} />
+                    <Textarea id="message" name="message" value={formData.message} onChange={handleChange} required rows={5} className="border-2 border-gold/30 focus:border-gold bg-gray-50 resize-none text-sm" disabled={isSubmitting} />
                   </div>
 
                   <Button type="submit" className="w-full bg-gold hover:bg-gold-dark text-navy font-semibold text-sm py-2 h-auto" disabled={isSubmitting}>
