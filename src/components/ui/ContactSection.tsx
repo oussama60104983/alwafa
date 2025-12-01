@@ -64,7 +64,7 @@ const ContactSection = () => {
           subject: formData.subject,
           message: formData.message,
           _replyto: formData.email,
-          _to: "jouinioussama044@gmail.com",
+          _to: "info@alwafatrading.qa",
         }),
       });
 
